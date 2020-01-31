@@ -2,6 +2,7 @@
 ./*/**/.DS_Store
 
 api/.bundle
+api/log/development.log
 api/vendor/bundle
 api/public/swagger-ui/openapi.json
 

@@ -4754,3 +4754,108 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 948)
 
 
+Started GET "/rails/info" for ::1 at 2020-01-31 17:35:54 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 676)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-31 17:35:54 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 18.6ms | Allocations: 4385)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 3.5ms | Allocations: 1213)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 27.0ms | Allocations: 7964)
+Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 0.0ms | Allocations: 10698)
+
+
+Started GET "/rails/info" for ::1 at 2020-01-31 17:36:22 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-31 17:36:22 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 7.8ms | Allocations: 4097)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 9.4ms | Allocations: 5892)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 6246)
+
+
+Started GET "/rails/info" for ::1 at 2020-01-31 17:36:41 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 200)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-31 17:36:41 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 6.1ms | Allocations: 4097)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 9.6ms | Allocations: 5891)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 6244)
+
+
+Started GET "/rails/info" for ::1 at 2020-01-31 17:36:58 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-31 17:36:58 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 8.2ms | Allocations: 4097)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5891)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 6244)
+
+
+Started GET "/rails/info" for ::1 at 2020-01-31 17:37:17 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-31 17:37:17 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 5.3ms | Allocations: 4095)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 8.3ms | Allocations: 5888)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started GET "/rails/info" for ::1 at 2020-01-31 17:39:58 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-31 17:39:58 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 8.8ms | Allocations: 4095)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 10.8ms | Allocations: 5888)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started GET "/rails/info" for ::1 at 2020-01-31 17:40:08 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-01-31 17:40:08 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 8.3ms | Allocations: 4095)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5888)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
