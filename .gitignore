@@ -1,3 +1,5 @@
+.DS_Store
+
 api/.bundle
 api/vendor/bundle
 api/public/swagger-ui/openapi.json
