@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "sourceMap": true,
+      "target": "es5", // TSはECMAScript 5に変換
+      "module": "es2015", // TSのモジュールはES Modulesとして出力
+      "outDir": "./dist/",
+      "noImplicitAny": true,
+			"jsx": "react",
+			"downlevelIteration": true,
+			"strict": true,
+			"strictNullChecks": true,
+			"strictPropertyInitialization": false,
+			"allowSyntheticDefaultImports": true,
+			"experimentalDecorators": true,
+			"esModuleInterop": true,
+			"declaration": false,
+			"lib": ["dom", "es2015", "es2016", "es2017", "esnext"],
+			"locale": "ja",
+			"moduleResolution": "node",
+	 },
+	 "exclude": ["node_modules"]
+}

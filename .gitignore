@@ -1,0 +1,8 @@
+api/.bundle
+api/vendor/bundle
+api/public/swagger-ui/openapi.json
+
+scripts/node_modules
+scripts/openapi*
+
+ui/node_modules
