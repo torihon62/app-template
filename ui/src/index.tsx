@@ -1,10 +1,12 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Welcome } from "./welcome";
-
-const element = <Welcome name="torimoto" />;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Root from './components/Root';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 ReactDOM.render(
-  element,
-  document.getElementById('root')
+	<Provider store={store}>
+		<Root />
+	</Provider>,
+	document.getElementById('root'),
 );
