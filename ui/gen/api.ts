@@ -22,40 +22,114 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  * 
  * @export
- * @interface Task
+ * @interface TaskRequestBody
  */
-export interface Task {
+export interface TaskRequestBody {
     /**
      * 
      * @type {string}
-     * @memberof Task
+     * @memberof TaskRequestBody
      */
     title?: string;
     /**
      * 
      * @type {boolean}
-     * @memberof Task
+     * @memberof TaskRequestBody
      */
     done?: boolean;
 }
 /**
  * 
  * @export
- * @interface User
+ * @interface TaskResponseBody
  */
-export interface User {
+export interface TaskResponseBody {
+    /**
+     * 
+     * @type {number}
+     * @memberof TaskResponseBody
+     */
+    id: number;
     /**
      * 
      * @type {string}
-     * @memberof User
+     * @memberof TaskResponseBody
+     */
+    title?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof TaskResponseBody
+     */
+    done?: boolean;
+    /**
+     * 
+     * @type {Date}
+     * @memberof TaskResponseBody
+     */
+    createdAt?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof TaskResponseBody
+     */
+    updatedAt?: Date;
+}
+/**
+ * 
+ * @export
+ * @interface UserRequestBody
+ */
+export interface UserRequestBody {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserRequestBody
      */
     name?: string;
     /**
      * 
      * @type {number}
-     * @memberof User
+     * @memberof UserRequestBody
      */
     age?: number;
+}
+/**
+ * 
+ * @export
+ * @interface UserResponseBody
+ */
+export interface UserResponseBody {
+    /**
+     * 
+     * @type {number}
+     * @memberof UserResponseBody
+     */
+    id: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UserResponseBody
+     */
+    name?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UserResponseBody
+     */
+    age?: number;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UserResponseBody
+     */
+    createdAt?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof UserResponseBody
+     */
+    updatedAt?: Date;
 }
 
 /**
@@ -67,12 +141,13 @@ export const TasksApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Returns an array of Task model
          * @summary Get all tasks
+         * @param {number} [id] 
          * @param {string} [title] 
          * @param {boolean} [done] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksGet(title?: string, done?: boolean, options: any = {}): RequestArgs {
+        tasksGet(id?: number, title?: string, done?: boolean, options: any = {}): RequestArgs {
             const localVarPath = `/tasks`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -82,6 +157,10 @@ export const TasksApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = id;
+            }
 
             if (title !== undefined) {
                 localVarQueryParameter['title'] = title;
@@ -177,11 +256,11 @@ export const TasksApiAxiosParamCreator = function (configuration?: Configuration
          * Update a Task
          * @summary Update a Task
          * @param {number} id 
-         * @param {Task} [task] Task to update
+         * @param {TaskRequestBody} [taskRequestBody] Task to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksIdPatch(id: number, task?: Task, options: any = {}): RequestArgs {
+        tasksIdPatch(id: number, taskRequestBody?: TaskRequestBody, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling tasksIdPatch.');
@@ -205,8 +284,8 @@ export const TasksApiAxiosParamCreator = function (configuration?: Configuration
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            const needsSerialization = (typeof task !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(task !== undefined ? task : {}) : (task || "");
+            const needsSerialization = (typeof taskRequestBody !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(taskRequestBody !== undefined ? taskRequestBody : {}) : (taskRequestBody || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -217,11 +296,11 @@ export const TasksApiAxiosParamCreator = function (configuration?: Configuration
          * Update a Task
          * @summary Update a Task
          * @param {number} id 
-         * @param {Task} [task] Task to update
+         * @param {TaskRequestBody} [taskRequestBody] Task to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksIdPut(id: number, task?: Task, options: any = {}): RequestArgs {
+        tasksIdPut(id: number, taskRequestBody?: TaskRequestBody, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling tasksIdPut.');
@@ -245,8 +324,8 @@ export const TasksApiAxiosParamCreator = function (configuration?: Configuration
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            const needsSerialization = (typeof task !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(task !== undefined ? task : {}) : (task || "");
+            const needsSerialization = (typeof taskRequestBody !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(taskRequestBody !== undefined ? taskRequestBody : {}) : (taskRequestBody || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -256,11 +335,11 @@ export const TasksApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Create a new Task
          * @summary Create a new Task
-         * @param {Task} [task] Task to create
+         * @param {TaskRequestBody} [taskRequestBody] Task to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksPost(task?: Task, options: any = {}): RequestArgs {
+        tasksPost(taskRequestBody?: TaskRequestBody, options: any = {}): RequestArgs {
             const localVarPath = `/tasks`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -279,8 +358,8 @@ export const TasksApiAxiosParamCreator = function (configuration?: Configuration
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            const needsSerialization = (typeof task !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(task !== undefined ? task : {}) : (task || "");
+            const needsSerialization = (typeof taskRequestBody !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(taskRequestBody !== undefined ? taskRequestBody : {}) : (taskRequestBody || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -299,13 +378,14 @@ export const TasksApiFp = function(configuration?: Configuration) {
         /**
          * Returns an array of Task model
          * @summary Get all tasks
+         * @param {number} [id] 
          * @param {string} [title] 
          * @param {boolean} [done] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksGet(title?: string, done?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Task>> {
-            const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksGet(title, done, options);
+        tasksGet(id?: number, title?: string, done?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<TaskResponseBody>> {
+            const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksGet(id, title, done, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -332,7 +412,7 @@ export const TasksApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksIdGet(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Task>> {
+        tasksIdGet(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<TaskResponseBody>> {
             const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksIdGet(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -343,12 +423,12 @@ export const TasksApiFp = function(configuration?: Configuration) {
          * Update a Task
          * @summary Update a Task
          * @param {number} id 
-         * @param {Task} [task] Task to update
+         * @param {TaskRequestBody} [taskRequestBody] Task to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksIdPatch(id: number, task?: Task, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksIdPatch(id, task, options);
+        tasksIdPatch(id: number, taskRequestBody?: TaskRequestBody, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksIdPatch(id, taskRequestBody, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -358,12 +438,12 @@ export const TasksApiFp = function(configuration?: Configuration) {
          * Update a Task
          * @summary Update a Task
          * @param {number} id 
-         * @param {Task} [task] Task to update
+         * @param {TaskRequestBody} [taskRequestBody] Task to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksIdPut(id: number, task?: Task, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksIdPut(id, task, options);
+        tasksIdPut(id: number, taskRequestBody?: TaskRequestBody, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksIdPut(id, taskRequestBody, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -372,12 +452,12 @@ export const TasksApiFp = function(configuration?: Configuration) {
         /**
          * Create a new Task
          * @summary Create a new Task
-         * @param {Task} [task] Task to create
+         * @param {TaskRequestBody} [taskRequestBody] Task to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksPost(task?: Task, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksPost(task, options);
+        tasksPost(taskRequestBody?: TaskRequestBody, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = TasksApiAxiosParamCreator(configuration).tasksPost(taskRequestBody, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -395,13 +475,14 @@ export const TasksApiFactory = function (configuration?: Configuration, basePath
         /**
          * Returns an array of Task model
          * @summary Get all tasks
+         * @param {number} [id] 
          * @param {string} [title] 
          * @param {boolean} [done] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksGet(title?: string, done?: boolean, options?: any) {
-            return TasksApiFp(configuration).tasksGet(title, done, options)(axios, basePath);
+        tasksGet(id?: number, title?: string, done?: boolean, options?: any) {
+            return TasksApiFp(configuration).tasksGet(id, title, done, options)(axios, basePath);
         },
         /**
          * Delete a Task
@@ -427,33 +508,33 @@ export const TasksApiFactory = function (configuration?: Configuration, basePath
          * Update a Task
          * @summary Update a Task
          * @param {number} id 
-         * @param {Task} [task] Task to update
+         * @param {TaskRequestBody} [taskRequestBody] Task to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksIdPatch(id: number, task?: Task, options?: any) {
-            return TasksApiFp(configuration).tasksIdPatch(id, task, options)(axios, basePath);
+        tasksIdPatch(id: number, taskRequestBody?: TaskRequestBody, options?: any) {
+            return TasksApiFp(configuration).tasksIdPatch(id, taskRequestBody, options)(axios, basePath);
         },
         /**
          * Update a Task
          * @summary Update a Task
          * @param {number} id 
-         * @param {Task} [task] Task to update
+         * @param {TaskRequestBody} [taskRequestBody] Task to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksIdPut(id: number, task?: Task, options?: any) {
-            return TasksApiFp(configuration).tasksIdPut(id, task, options)(axios, basePath);
+        tasksIdPut(id: number, taskRequestBody?: TaskRequestBody, options?: any) {
+            return TasksApiFp(configuration).tasksIdPut(id, taskRequestBody, options)(axios, basePath);
         },
         /**
          * Create a new Task
          * @summary Create a new Task
-         * @param {Task} [task] Task to create
+         * @param {TaskRequestBody} [taskRequestBody] Task to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tasksPost(task?: Task, options?: any) {
-            return TasksApiFp(configuration).tasksPost(task, options)(axios, basePath);
+        tasksPost(taskRequestBody?: TaskRequestBody, options?: any) {
+            return TasksApiFp(configuration).tasksPost(taskRequestBody, options)(axios, basePath);
         },
     };
 };
@@ -468,14 +549,15 @@ export class TasksApi extends BaseAPI {
     /**
      * Returns an array of Task model
      * @summary Get all tasks
+     * @param {number} [id] 
      * @param {string} [title] 
      * @param {boolean} [done] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TasksApi
      */
-    public tasksGet(title?: string, done?: boolean, options?: any) {
-        return TasksApiFp(this.configuration).tasksGet(title, done, options)(this.axios, this.basePath);
+    public tasksGet(id?: number, title?: string, done?: boolean, options?: any) {
+        return TasksApiFp(this.configuration).tasksGet(id, title, done, options)(this.axios, this.basePath);
     }
 
     /**
@@ -506,38 +588,38 @@ export class TasksApi extends BaseAPI {
      * Update a Task
      * @summary Update a Task
      * @param {number} id 
-     * @param {Task} [task] Task to update
+     * @param {TaskRequestBody} [taskRequestBody] Task to update
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TasksApi
      */
-    public tasksIdPatch(id: number, task?: Task, options?: any) {
-        return TasksApiFp(this.configuration).tasksIdPatch(id, task, options)(this.axios, this.basePath);
+    public tasksIdPatch(id: number, taskRequestBody?: TaskRequestBody, options?: any) {
+        return TasksApiFp(this.configuration).tasksIdPatch(id, taskRequestBody, options)(this.axios, this.basePath);
     }
 
     /**
      * Update a Task
      * @summary Update a Task
      * @param {number} id 
-     * @param {Task} [task] Task to update
+     * @param {TaskRequestBody} [taskRequestBody] Task to update
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TasksApi
      */
-    public tasksIdPut(id: number, task?: Task, options?: any) {
-        return TasksApiFp(this.configuration).tasksIdPut(id, task, options)(this.axios, this.basePath);
+    public tasksIdPut(id: number, taskRequestBody?: TaskRequestBody, options?: any) {
+        return TasksApiFp(this.configuration).tasksIdPut(id, taskRequestBody, options)(this.axios, this.basePath);
     }
 
     /**
      * Create a new Task
      * @summary Create a new Task
-     * @param {Task} [task] Task to create
+     * @param {TaskRequestBody} [taskRequestBody] Task to create
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TasksApi
      */
-    public tasksPost(task?: Task, options?: any) {
-        return TasksApiFp(this.configuration).tasksPost(task, options)(this.axios, this.basePath);
+    public tasksPost(taskRequestBody?: TaskRequestBody, options?: any) {
+        return TasksApiFp(this.configuration).tasksPost(taskRequestBody, options)(this.axios, this.basePath);
     }
 
 }
@@ -552,12 +634,13 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Returns an array of User model
          * @summary Get all users
+         * @param {number} [id] 
          * @param {string} [name] 
          * @param {number} [age] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersGet(name?: string, age?: number, options: any = {}): RequestArgs {
+        usersGet(id?: number, name?: string, age?: number, options: any = {}): RequestArgs {
             const localVarPath = `/users`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -567,6 +650,10 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = id;
+            }
 
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
@@ -662,11 +749,11 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
          * Update a User
          * @summary Update a User
          * @param {number} id 
-         * @param {User} [user] User to update
+         * @param {UserRequestBody} [userRequestBody] User to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersIdPatch(id: number, user?: User, options: any = {}): RequestArgs {
+        usersIdPatch(id: number, userRequestBody?: UserRequestBody, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling usersIdPatch.');
@@ -690,8 +777,8 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            const needsSerialization = (typeof user !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(user !== undefined ? user : {}) : (user || "");
+            const needsSerialization = (typeof userRequestBody !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(userRequestBody !== undefined ? userRequestBody : {}) : (userRequestBody || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -702,11 +789,11 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
          * Update a User
          * @summary Update a User
          * @param {number} id 
-         * @param {User} [user] User to update
+         * @param {UserRequestBody} [userRequestBody] User to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersIdPut(id: number, user?: User, options: any = {}): RequestArgs {
+        usersIdPut(id: number, userRequestBody?: UserRequestBody, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling usersIdPut.');
@@ -730,8 +817,8 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            const needsSerialization = (typeof user !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(user !== undefined ? user : {}) : (user || "");
+            const needsSerialization = (typeof userRequestBody !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(userRequestBody !== undefined ? userRequestBody : {}) : (userRequestBody || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -741,11 +828,11 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
         /**
          * Create a new User
          * @summary Create a new User
-         * @param {User} [user] User to create
+         * @param {UserRequestBody} [userRequestBody] User to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersPost(user?: User, options: any = {}): RequestArgs {
+        usersPost(userRequestBody?: UserRequestBody, options: any = {}): RequestArgs {
             const localVarPath = `/users`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -764,8 +851,8 @@ export const UsersApiAxiosParamCreator = function (configuration?: Configuration
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            const needsSerialization = (typeof user !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(user !== undefined ? user : {}) : (user || "");
+            const needsSerialization = (typeof userRequestBody !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(userRequestBody !== undefined ? userRequestBody : {}) : (userRequestBody || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -784,13 +871,14 @@ export const UsersApiFp = function(configuration?: Configuration) {
         /**
          * Returns an array of User model
          * @summary Get all users
+         * @param {number} [id] 
          * @param {string} [name] 
          * @param {number} [age] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersGet(name?: string, age?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<User>> {
-            const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersGet(name, age, options);
+        usersGet(id?: number, name?: string, age?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<UserResponseBody>> {
+            const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersGet(id, name, age, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -817,7 +905,7 @@ export const UsersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersIdGet(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<User>> {
+        usersIdGet(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<UserResponseBody>> {
             const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersIdGet(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -828,12 +916,12 @@ export const UsersApiFp = function(configuration?: Configuration) {
          * Update a User
          * @summary Update a User
          * @param {number} id 
-         * @param {User} [user] User to update
+         * @param {UserRequestBody} [userRequestBody] User to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersIdPatch(id: number, user?: User, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersIdPatch(id, user, options);
+        usersIdPatch(id: number, userRequestBody?: UserRequestBody, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersIdPatch(id, userRequestBody, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -843,12 +931,12 @@ export const UsersApiFp = function(configuration?: Configuration) {
          * Update a User
          * @summary Update a User
          * @param {number} id 
-         * @param {User} [user] User to update
+         * @param {UserRequestBody} [userRequestBody] User to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersIdPut(id: number, user?: User, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersIdPut(id, user, options);
+        usersIdPut(id: number, userRequestBody?: UserRequestBody, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersIdPut(id, userRequestBody, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -857,12 +945,12 @@ export const UsersApiFp = function(configuration?: Configuration) {
         /**
          * Create a new User
          * @summary Create a new User
-         * @param {User} [user] User to create
+         * @param {UserRequestBody} [userRequestBody] User to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersPost(user?: User, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
-            const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersPost(user, options);
+        usersPost(userRequestBody?: UserRequestBody, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<void> {
+            const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).usersPost(userRequestBody, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -880,13 +968,14 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
         /**
          * Returns an array of User model
          * @summary Get all users
+         * @param {number} [id] 
          * @param {string} [name] 
          * @param {number} [age] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersGet(name?: string, age?: number, options?: any) {
-            return UsersApiFp(configuration).usersGet(name, age, options)(axios, basePath);
+        usersGet(id?: number, name?: string, age?: number, options?: any) {
+            return UsersApiFp(configuration).usersGet(id, name, age, options)(axios, basePath);
         },
         /**
          * Delete a User
@@ -912,33 +1001,33 @@ export const UsersApiFactory = function (configuration?: Configuration, basePath
          * Update a User
          * @summary Update a User
          * @param {number} id 
-         * @param {User} [user] User to update
+         * @param {UserRequestBody} [userRequestBody] User to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersIdPatch(id: number, user?: User, options?: any) {
-            return UsersApiFp(configuration).usersIdPatch(id, user, options)(axios, basePath);
+        usersIdPatch(id: number, userRequestBody?: UserRequestBody, options?: any) {
+            return UsersApiFp(configuration).usersIdPatch(id, userRequestBody, options)(axios, basePath);
         },
         /**
          * Update a User
          * @summary Update a User
          * @param {number} id 
-         * @param {User} [user] User to update
+         * @param {UserRequestBody} [userRequestBody] User to update
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersIdPut(id: number, user?: User, options?: any) {
-            return UsersApiFp(configuration).usersIdPut(id, user, options)(axios, basePath);
+        usersIdPut(id: number, userRequestBody?: UserRequestBody, options?: any) {
+            return UsersApiFp(configuration).usersIdPut(id, userRequestBody, options)(axios, basePath);
         },
         /**
          * Create a new User
          * @summary Create a new User
-         * @param {User} [user] User to create
+         * @param {UserRequestBody} [userRequestBody] User to create
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        usersPost(user?: User, options?: any) {
-            return UsersApiFp(configuration).usersPost(user, options)(axios, basePath);
+        usersPost(userRequestBody?: UserRequestBody, options?: any) {
+            return UsersApiFp(configuration).usersPost(userRequestBody, options)(axios, basePath);
         },
     };
 };
@@ -953,14 +1042,15 @@ export class UsersApi extends BaseAPI {
     /**
      * Returns an array of User model
      * @summary Get all users
+     * @param {number} [id] 
      * @param {string} [name] 
      * @param {number} [age] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    public usersGet(name?: string, age?: number, options?: any) {
-        return UsersApiFp(this.configuration).usersGet(name, age, options)(this.axios, this.basePath);
+    public usersGet(id?: number, name?: string, age?: number, options?: any) {
+        return UsersApiFp(this.configuration).usersGet(id, name, age, options)(this.axios, this.basePath);
     }
 
     /**
@@ -991,38 +1081,38 @@ export class UsersApi extends BaseAPI {
      * Update a User
      * @summary Update a User
      * @param {number} id 
-     * @param {User} [user] User to update
+     * @param {UserRequestBody} [userRequestBody] User to update
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    public usersIdPatch(id: number, user?: User, options?: any) {
-        return UsersApiFp(this.configuration).usersIdPatch(id, user, options)(this.axios, this.basePath);
+    public usersIdPatch(id: number, userRequestBody?: UserRequestBody, options?: any) {
+        return UsersApiFp(this.configuration).usersIdPatch(id, userRequestBody, options)(this.axios, this.basePath);
     }
 
     /**
      * Update a User
      * @summary Update a User
      * @param {number} id 
-     * @param {User} [user] User to update
+     * @param {UserRequestBody} [userRequestBody] User to update
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    public usersIdPut(id: number, user?: User, options?: any) {
-        return UsersApiFp(this.configuration).usersIdPut(id, user, options)(this.axios, this.basePath);
+    public usersIdPut(id: number, userRequestBody?: UserRequestBody, options?: any) {
+        return UsersApiFp(this.configuration).usersIdPut(id, userRequestBody, options)(this.axios, this.basePath);
     }
 
     /**
      * Create a new User
      * @summary Create a new User
-     * @param {User} [user] User to create
+     * @param {UserRequestBody} [userRequestBody] User to create
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    public usersPost(user?: User, options?: any) {
-        return UsersApiFp(this.configuration).usersPost(user, options)(this.axios, this.basePath);
+    public usersPost(userRequestBody?: UserRequestBody, options?: any) {
+        return UsersApiFp(this.configuration).usersPost(userRequestBody, options)(this.axios, this.basePath);
     }
 
 }

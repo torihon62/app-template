@@ -1,5 +1,5 @@
-import { Task } from "../../../gen";
+import { TaskResponseBody } from "../../../gen";
 
 export interface TasksState {
-	list: Task[];
+	list: TaskResponseBody[];
 }

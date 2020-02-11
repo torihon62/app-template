@@ -1,7 +1,7 @@
 import { takeEveryFsa } from "../helpers";
 import { actions } from "./";
 import { put, call } from "redux-saga/effects";
-import { TasksApi, Task } from "../../../gen";
+import { TasksApi, TaskResponseBody } from "../../../gen";
 import { AxiosResponse } from "axios";
 
 export function* tasksSaga() {
@@ -18,7 +18,7 @@ export function* tasksSaga() {
 	yield takeEveryFsa(actions.fetch.started, function*(action) {
 		const taskApi = new TasksApi();
 
-		const tasks: AxiosResponse<Task[]> = yield call(
+		const tasks: AxiosResponse<TaskResponseBody[]> = yield call(
 			async () => {
 				return await taskApi.tasksGet();
 			}

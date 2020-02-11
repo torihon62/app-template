@@ -41,6 +41,13 @@ function getSchemas(models) {
 
 	models.forEach(model => {
 		schemas[model] = [];
+		schemas[model].push({
+			name: 'id',
+			type: 'integer',
+			options: {
+				required: true
+			},
+		})
 		const regExp = new RegExp(`create_table "${model}".*?end<br>`, 'g');
 		const tables = regExp.exec(schema_rb);
 		if (tables) {
@@ -111,7 +118,7 @@ function getOAS(schemas) {
 		oas.paths[`/${schema}`].get.responses['200'].content['application/json'].schema = {};
 		oas.paths[`/${schema}`].get.responses['200'].content['application/json'].schema.type = 'array';
 		oas.paths[`/${schema}`].get.responses['200'].content['application/json'].schema.items = {};
-		oas.paths[`/${schema}`].get.responses['200'].content['application/json'].schema.items['$ref'] = `#/components/schemas/${modelName}`;
+		oas.paths[`/${schema}`].get.responses['200'].content['application/json'].schema.items['$ref'] = `#/components/schemas/${modelName}_ResponseBody`;
 
 		// oas.paths[`/${schema}`].post
 		oas.paths[`/${schema}`].post = {};
@@ -123,7 +130,7 @@ function getOAS(schemas) {
 		oas.paths[`/${schema}`].post.requestBody.description = `${modelName} to create`;
 		oas.paths[`/${schema}`].post.requestBody.content = {};
 		oas.paths[`/${schema}`].post.requestBody.content['application/json'] = {};
-		oas.paths[`/${schema}`].post.requestBody.content['application/json'].schema = {'$ref': `#/components/schemas/${modelName}`};
+		oas.paths[`/${schema}`].post.requestBody.content['application/json'].schema = {'$ref': `#/components/schemas/${modelName}_RequestBody`};
 		oas.paths[`/${schema}`].post.responses = {};
 		oas.paths[`/${schema}`].post.responses['201'] = {};
 		oas.paths[`/${schema}`].post.responses['201'].description = 'CREATED';
@@ -147,7 +154,7 @@ function getOAS(schemas) {
 		oas.paths[`/${schema}/{id}`].get.responses['200'].content['application/json'].schema = {};
 		oas.paths[`/${schema}/{id}`].get.responses['200'].content['application/json'].schema.type = 'object';
 		oas.paths[`/${schema}/{id}`].get.responses['200'].content['application/json'].schema.items = {};
-		oas.paths[`/${schema}/{id}`].get.responses['200'].content['application/json'].schema.items['$ref'] = `#/components/schemas/${modelName}`;
+		oas.paths[`/${schema}/{id}`].get.responses['200'].content['application/json'].schema.items['$ref'] = `#/components/schemas/${modelName}_ResponseBody`;
 
 		// oas.paths[`/${schema}/{id}`].put
 		oas.paths[`/${schema}/{id}`].put = {};
@@ -164,7 +171,7 @@ function getOAS(schemas) {
 		oas.paths[`/${schema}/{id}`].put.requestBody.description = `${modelName} to update`;
 		oas.paths[`/${schema}/{id}`].put.requestBody.content = {};
 		oas.paths[`/${schema}/{id}`].put.requestBody.content['application/json'] = {};
-		oas.paths[`/${schema}/{id}`].put.requestBody.content['application/json'].schema = {'$ref': `#/components/schemas/${modelName}`};
+		oas.paths[`/${schema}/{id}`].put.requestBody.content['application/json'].schema = {'$ref': `#/components/schemas/${modelName}_RequestBody`};
 		oas.paths[`/${schema}/{id}`].put.responses = {};
 		oas.paths[`/${schema}/{id}`].put.responses['204'] = {};
 		oas.paths[`/${schema}/{id}`].put.responses['204'].description = 'UPDATED';
@@ -184,7 +191,7 @@ function getOAS(schemas) {
 		oas.paths[`/${schema}/{id}`].patch.requestBody.description = `${modelName} to update`;
 		oas.paths[`/${schema}/{id}`].patch.requestBody.content = {};
 		oas.paths[`/${schema}/{id}`].patch.requestBody.content['application/json'] = {};
-		oas.paths[`/${schema}/{id}`].patch.requestBody.content['application/json'].schema = {'$ref': `#/components/schemas/${modelName}`};
+		oas.paths[`/${schema}/{id}`].patch.requestBody.content['application/json'].schema = {'$ref': `#/components/schemas/${modelName}_RequestBody`};
 		oas.paths[`/${schema}/{id}`].patch.responses = {};
 		oas.paths[`/${schema}/{id}`].patch.responses['204'] = {};
 		oas.paths[`/${schema}/{id}`].patch.responses['204'].description = 'UPDATED';
@@ -211,14 +218,24 @@ function getOAS(schemas) {
 	oas.components.schemas = {};
 	for (const schema in schemas) {
 		const modelName = inflector.singularize(schema).charAt(0).toUpperCase() + inflector.singularize(schema).slice(1);
-		oas.components.schemas[modelName] = {};
-		oas.components.schemas[modelName].type = 'object';
-		oas.components.schemas[modelName].properties = {};
+		oas.components.schemas[`${modelName}_RequestBody`] = {};
+		oas.components.schemas[`${modelName}_RequestBody`].type = 'object';
+		oas.components.schemas[`${modelName}_RequestBody`].properties = {};
 		for (const properties of schemas[schema]) {
-			if (properties.name === 'created_at' || properties.name === 'updated_at') continue;
-			oas.components.schemas[modelName].properties[properties.name] = {};
-			oas.components.schemas[modelName].properties[properties.name].type = properties.type;
-			if (properties.type === 'integer') oas.components.schemas[modelName].properties[properties.name].format = 'int64';
+			if (properties.name === 'id' || properties.name === 'created_at' || properties.name === 'updated_at') continue;
+			oas.components.schemas[`${modelName}_RequestBody`].properties[properties.name] = {};
+			oas.components.schemas[`${modelName}_RequestBody`].properties[properties.name].type = properties.type;
+			if (properties.type === 'integer') oas.components.schemas[`${modelName}_RequestBody`].properties[properties.name].format = 'int64';
+		}
+		oas.components.schemas[`${modelName}_ResponseBody`] = {};
+		oas.components.schemas[`${modelName}_ResponseBody`].type = 'object';
+		oas.components.schemas[`${modelName}_ResponseBody`].required = [];
+		oas.components.schemas[`${modelName}_ResponseBody`].required.push('id');
+		oas.components.schemas[`${modelName}_ResponseBody`].properties = {};
+		for (const properties of schemas[schema]) {
+			oas.components.schemas[`${modelName}_ResponseBody`].properties[properties.name] = {};
+			oas.components.schemas[`${modelName}_ResponseBody`].properties[properties.name].type = properties.type.replace('datetime', 'date-time');
+			if (properties.type === 'integer') oas.components.schemas[`${modelName}_ResponseBody`].properties[properties.name].format = 'int64';
 		}
 	}
 	return oas;

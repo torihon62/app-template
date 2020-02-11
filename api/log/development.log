@@ -4932,3 +4932,540 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 920)
 
 
+Started GET "/rails/info" for ::1 at 2020-02-11 15:10:08 +0900
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 679)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-11 15:10:08 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 14.3ms | Allocations: 4383)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 5.1ms | Allocations: 1210)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 26.9ms | Allocations: 7959)
+Completed 200 OK in 42ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 10692)
+
+
+Started GET "/rails/info" for ::1 at 2020-02-11 15:12:51 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-11 15:12:51 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 14.4ms | Allocations: 4097)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 17.4ms | Allocations: 5892)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 6246)
+
+
+Started GET "/rails/info" for ::1 at 2020-02-11 15:17:38 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-11 15:17:38 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 11.5ms | Allocations: 4097)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 16.0ms | Allocations: 5891)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 6244)
+
+
+Started GET "/rails/info" for ::1 at 2020-02-11 15:18:05 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-11 15:18:05 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 10.3ms | Allocations: 4095)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5888)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started GET "/rails/info" for ::1 at 2020-02-11 15:24:50 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-11 15:24:50 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 5.0ms | Allocations: 4098)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 34.2ms | Allocations: 5892)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 6245)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:26:09 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.6ms | Allocations: 5430)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:26:17 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 936)
+
+
+Started GET "/swaggerui/" for ::1 at 2020-02-11 15:26:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/swaggerui"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2020-02-11 15:26:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/dist/swaggerui/" for ::1 at 2020-02-11 15:27:01 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/dist/swaggerui"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/swaggerui/" for ::1 at 2020-02-11 15:27:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/swaggerui"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/swagger-ui/swagger-ui/dist/swagger-ui.css" for ::1 at 2020-02-11 15:27:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/swagger-ui/swagger-ui/dist/swagger-ui.css"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/swagger-ui/swagger-ui/dist/swagger-ui-standalone-preset.js" for ::1 at 2020-02-11 15:27:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/swagger-ui/swagger-ui/dist/swagger-ui-standalone-preset.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/swagger-ui/swagger-ui/dist/swagger-ui-bundle.js" for ::1 at 2020-02-11 15:27:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/swagger-ui/swagger-ui/dist/swagger-ui-bundle.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/swagger-ui/swagger-ui/dist/swagger-ui-standalone-preset.js" for ::1 at 2020-02-11 15:27:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/swagger-ui/swagger-ui/dist/swagger-ui-standalone-preset.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/swagger-ui/swagger-ui/dist/favicon-32x32.png" for ::1 at 2020-02-11 15:27:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/swagger-ui/swagger-ui/dist/favicon-32x32.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/swagger-ui/swagger-ui/dist/favicon-16x16.png" for ::1 at 2020-02-11 15:27:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/swagger-ui/swagger-ui/dist/favicon-16x16.png"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/tasks" for ::1 at 2020-02-11 15:28:03 +0900
+Processing by TasksController#index as JSON
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms | Allocations: 919)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:29:13 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 934)
+
+
+Started POST "/tasks" for ::1 at 2020-02-11 15:30:21 +0900
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"string", "done"=>true, "task"=>{"title"=>"string", "done"=>true}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mTask Create (12.7ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "done", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "string"], ["done", 1], ["created_at", "2020-02-11 06:30:21.543744"], ["updated_at", "2020-02-11 06:30:21.543744"]]
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+Completed 201 Created in 20ms (Views: 0.9ms | ActiveRecord: 13.9ms | Allocations: 2594)
+
+
+Started POST "/tasks" for ::1 at 2020-02-11 15:30:40 +0900
+Processing by TasksController#create as */*
+  Parameters: {"id"=>0, "title"=>"string", "done"=>true, "task"=>{"id"=>0, "title"=>"string", "done"=>true}}
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mTask Create (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "done", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "string"], ["done", 1], ["created_at", "2020-02-11 06:30:40.399212"], ["updated_at", "2020-02-11 06:30:40.399212"]]
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+Completed 201 Created in 9ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 2364)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:30:47 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 1200)
+
+
+Started GET "/rails/info" for ::1 at 2020-02-11 15:41:45 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-11 15:41:45 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 14.2ms | Allocations: 4095)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 16.4ms | Allocations: 5888)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started GET "/rails/info" for ::1 at 2020-02-11 15:47:57 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-11 15:47:57 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 7.8ms | Allocations: 4095)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 9.4ms | Allocations: 5888)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started GET "/rails/info" for ::1 at 2020-02-11 15:48:53 +0900
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-11 15:48:53 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (Duration: 9.9ms | Allocations: 4095)
+  Rendered vendor/bundle/ruby/2.5.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered vendor/bundle/ruby/2.5.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 12.5ms | Allocations: 5888)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:50:49 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1216)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:52:40 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1198)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:52:41 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1198)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:53:05 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1198)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:53:06 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1198)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:53:10 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1198)
+
+
+Started POST "/tasks" for ::1 at 2020-02-11 15:54:40 +0900
+Processing by TasksController#create as */*
+  Parameters: {"done"=>true, "task"=>{"done"=>true}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[36mTask Create (4.6ms)[0m  [1m[32mINSERT INTO "tasks" ("done", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["done", 1], ["created_at", "2020-02-11 06:54:40.826938"], ["updated_at", "2020-02-11 06:54:40.826938"]]
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 2.3ms | ActiveRecord: 5.4ms | Allocations: 2289)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:54:50 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1331)
+
+
+Started DELETE "/tasks/4" for ::1 at 2020-02-11 15:55:18 +0900
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:44:in `set_task'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[36mTask Destroy (4.6ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:38:in `destroy'
+Completed 204 No Content in 28ms (ActiveRecord: 5.9ms | Allocations: 5680)
+
+
+Started GET "/tasks" for ::1 at 2020-02-11 15:55:35 +0900
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1199)
+
+

@@ -6,11 +6,11 @@ import { componentDidMount, componentWillUnMount } from './helpers';
 import { DispatchProp, connect } from 'react-redux';
 import { actions as appUiActions } from '../reducers/app-ui';
 import { selectors as tasksSelector } from '../reducers/tasks'
-import { Task } from '../../gen';
+import { TaskResponseBody } from '../../gen';
 import { StoreState } from '../reducers/types';
 
 interface PropsFromStore {
-	tasks: Task[];
+	tasks: TaskResponseBody[];
 }
 
 const Root = (props: PropsFromStore & DispatchProp) => {
@@ -42,7 +42,7 @@ const Root = (props: PropsFromStore & DispatchProp) => {
 							{
 								props.tasks.map(task => {
 									return (
-										<li key={`s${task.title}`}>title: {task.title}, done: {`${task.done}`}</li>
+										<li key={`${task.id}_${task.title}`}>id: {task.id}, title: {task.title}, done: {`${task.done}`}</li>
 									)
 								})
 							}
